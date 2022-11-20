@@ -286,15 +286,20 @@ img {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+  position: relative;
 }
 .form-field label {
   margin-bottom: 4px;
 }
 .form-field input {
-  padding: 0;
-  margin: 0;
+  padding: 11px 12px;
+
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: none;
+}
+.form-input {
+  height: 40px;
 }
 .form-input .icon-form-field {
   position: absolute;
@@ -309,6 +314,19 @@ img {
 .textarea-modal {
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.checkbox {
+  appearance: none;
+}
+.checkbox :checked + .icon {
+  background-color: #2196f3;
+}
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
 /* Feateures */
@@ -553,9 +571,12 @@ img {
 
 /* CARD */
 .card {
-  box-shadow: var(--card-shadow);
   border-radius: 4px;
   overflow: hidden;
+  height: 100%;
+}
+.card:hover {
+  box-shadow: var(--card-shadow);
 }
 
 .card-content {
@@ -586,6 +607,7 @@ img {
   position: absolute;
   bottom: 0;
   left: 0;
+  overflow: auto;
   padding: 63px 24px;
   font-size: 18px;
   line-height: 1.56;

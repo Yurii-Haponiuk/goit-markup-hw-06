@@ -280,55 +280,95 @@ img {
   margin: 12px 40px 20px;
 }
 
-.modal input[type='checkbox'] {
+/* .modal input[type='checkbox'] {
+} */
+.input-wrapper {
+  position: relative;
+  margin-bottom: 10px;
 }
-.form-field {
+
+.input-line {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
-  position: relative;
 }
-.form-field label {
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+.input-line:last-child {
+  margin-bottom: 20;
+}
+
+.form-label {
   margin-bottom: 4px;
 }
-.form-field input {
-  padding: 11px 12px;
-
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  outline: none;
-}
-.form-input {
-  height: 40px;
-}
-.form-input .icon-form-field {
+.input-icon {
   position: absolute;
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
-  display: inline-block;
+  fill: var(--primary-text-color);
 }
-.form-label-modal {
-  padding: 12px 16px;
+.form-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  /* outline: none; */
 }
+.input-wrapper input {
+  margin-bottom: 0;
+}
+.form-input:focus + .input-icon {
+  fill: var(--accent-color);
+}
+.form-input:focus {
+  border-color: var(--accent-color);
+}
+.input-wrapper:focus-within > .input-icon {
+}
+
 .textarea-modal {
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
-.checkbox {
-  appearance: none;
+.checkbox-agree {
+  display: flex;
+  align-items: center;
 }
-.checkbox :checked + .icon {
-  background-color: #2196f3;
-}
-.icon {
-  display: inline-block;
+.checkbox-agree .icon-wrapper {
   width: 16px;
   height: 15px;
-  border: 2px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.checkbox-agree .agree-icon {
+  fill: transparent;
+}
+
+.check-line input:checked + .checkbox-agree .icon-wrapper {
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.check-line input:checked + .checkbox-agree .agree-icon {
+  fill: #ffffff;
+}
+/* .checkbox {
+  appearance: none;
+} */
+/* .checkbox :checked + .icon {
+  background-color: #2196f3;
+} */
+
 /* Feateures */
 .feateure {
   padding-bottom: 0;
